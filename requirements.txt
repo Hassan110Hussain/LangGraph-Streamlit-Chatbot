@@ -25,6 +25,11 @@ langchain-openai==0.3.14
 langchain-community==0.3.23
 langchain-text-splitters==0.3.8
 
+# ── SQLite persistence for LangGraph ────────────────────────────────────────
+# Provides: langgraph.checkpoint.sqlite.SqliteSaver
+# Version 2.0.11 is the highest that works with langgraph-checkpoint<3.0.0
+langgraph-checkpoint-sqlite==2.0.11
+
 # ── Google Gemini provider ──────────────────────────────────────────────────
 # Compatible with langchain-core 0.3.x (requires >=0.3.37, <0.4.0)
 langchain-google-genai==2.0.11
