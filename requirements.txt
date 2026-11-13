@@ -1,0 +1,55 @@
+# ============================================================
+# LangGraph Chatbot UI – Python dependencies
+# Tested on Python 3.14.4, Windows x64
+#
+# Dependency notes
+# ----------------
+# • langchain-core==0.3.58 is the pinned floor required by
+#   langchain==0.3.25, langchain-openai==0.3.14, and langgraph==0.2.73.
+#   Do NOT upgrade independently — bump all three together.
+#
+# • langchain-google-genai==2.0.11 is the highest 2.x release that
+#   still accepts langchain-core<0.4.0 (i.e. 0.3.x).
+#
+# • protobuf is pinned to <6 because streamlit==1.44.1 requires that range.
+#   google-ai-generativelanguage 0.6.18 also stays within protobuf<7.
+#
+# • google-api-core is pinned to <2.44 to avoid pulling in protobuf>=6.33.
+# ============================================================
+
+# ── Core LangChain / LangGraph ──────────────────────────────────────────────
+langchain==0.3.25
+langgraph==0.2.73
+langchain-core==0.3.58
+langchain-openai==0.3.14
+langchain-community==0.3.23
+langchain-text-splitters==0.3.8
+
+# ── Google Gemini provider ──────────────────────────────────────────────────
+# Compatible with langchain-core 0.3.x (requires >=0.3.37, <0.4.0)
+langchain-google-genai==2.0.11
+
+# ── Google API support libraries ────────────────────────────────────────────
+# Pinned to avoid pulling in protobuf>=6 which conflicts with streamlit
+google-api-core==2.25.2
+googleapis-common-protos==1.75.0
+proto-plus==1.28.2
+protobuf==5.29.6
+
+# ── Web search tool ─────────────────────────────────────────────────────────
+duckduckgo-search==7.5.3
+
+# ── HTTP client (stock price tool) ──────────────────────────────────────────
+requests==2.32.3
+
+# ── Frontend ────────────────────────────────────────────────────────────────
+streamlit==1.44.1
+
+# ── Environment variable management ─────────────────────────────────────────
+python-dotenv==1.1.0
+
+# ── Testing ─────────────────────────────────────────────────────────────────
+pytest==9.2.0
+
+# ── Type hints backport ─────────────────────────────────────────────────────
+typing-extensions==4.14.1
